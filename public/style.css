@@ -1,0 +1,129 @@
+body{
+    background-color: #000000;
+}
+/* .jumbotron{
+    padding-top: 10rem;
+    background-color: #000000;
+    background-image: url("cjava.jpg");
+    background-size: cover;
+} */
+ 
+
+.top-img{
+    margin-left: 30px;
+}
+.jumbotron {
+  position: relative; 
+  z-index: 1; 
+  color: #FFFFFF; 
+
+}
+
+.jumbotron::before {
+
+  content: ""; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; 
+  
+
+  background-image: url("cjava.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4; 
+}
+
+h1{
+    color: #ffffff;
+}
+h4{
+    color: #ffffff;
+}
+p{
+    color: white;
+}
+.myphoto{
+    display:flex;
+    vertical-align: left;
+    margin-right: 20px;
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    float: right;
+    object-fit: contain;
+    
+}
+.display{
+    font-size: 50px;
+    color: rgba(255, 217, 0, 0.786);
+}
+.subhead{
+    font-size: 30px;
+    color: #05d5f0;
+}
+.display-4{
+    color: #d0ff00;
+    padding-left: 10px;
+}
+.container mt-5{
+    display: inline-block;
+}
+.lead{
+    padding-left: 10px;
+}
+.progress{
+    height: 20px;
+    background-color: #050404;
+}
+.titlepr{
+    font-size: 30px;
+    color: #ffffff;
+    display: inline-block;
+}
+.management{
+    font-size: 25px;
+    padding-right: 25px;
+    display: inline-block;
+    color: #fefefe;
+}
+.cloud{
+    padding-right:25px;
+    font-size: 15px;
+}
+.certificates{
+    display: inline-block;
+    font-size: 20px;
+}
+.skills{
+    color: #ffffff;
+    display: inline-block;
+}
+.Web{
+    padding:5px;
+    font-size: 20px;
+    color: #caccf1;
+}
+.OCI{
+    background-color: #ffffff;
+}
+.DSA{
+    color: #ffffff;
+}
+.end{
+    text-align: center;
+    color: #ffffff;
+    background-color: #3c39391a;
+    font-size: 2px;
+    width: 100%;
+    position: sticky;
+}
+.name1{
+    font-size: 10px;
+}
+.email1{
+    font-size: 15px;
+}
+
