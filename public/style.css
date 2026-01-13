@@ -127,3 +127,11 @@ p{
     font-size: 15px;
 }
 
+
+@media (max-width: 768px) {
+    .icon {
+        display:flex;
+        flex-direction:row;
+        padding-bottom: 10px;
+    }
+}
