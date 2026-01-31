@@ -135,3 +135,16 @@ p{
         padding-bottom: 10px;
     }
 }
+.display{
+    display:flex;
+    justify-content: center;
+}
+.Project1 h1{
+    color: #ffffff;
+}
+.projects_page{
+    padding-left: 20px;
+}
+.Project1{
+    padding-bottom: 20px;
+}
