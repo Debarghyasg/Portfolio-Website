@@ -138,6 +138,7 @@ p{
 .display{
     display:flex;
     justify-content: center;
+    text-align: center;
 }
 .Project1 h1{
     color: #ffffff;
@@ -147,4 +148,12 @@ p{
 }
 .Project1{
     padding-bottom: 20px;
+}
+.display2{
+    font-size: 60px;
+    color: #c8e589;
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    padding-left: 35rem;
 }
