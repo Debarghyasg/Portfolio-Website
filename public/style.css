@@ -135,10 +135,12 @@ p{
         padding-bottom: 10px;
     }
 }
+
 .display{
     display:flex;
     justify-content: center;
     text-align: center;
+    
 }
 .Project1 h1{
     color: #ffffff;
@@ -156,4 +158,9 @@ p{
     justify-content: center;
     text-align: center;
     padding-left: 35rem;
+}
+@media (max-width: 768px) {
+    .display2{
+        padding-left: 10px;
+    }
 }
