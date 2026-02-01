@@ -32,6 +32,7 @@ body{
 
   background-image: url("cjava.jpg");
   background-size: cover;
+  height:150px;
   background-position: center;
   opacity: 0.4; 
 }
@@ -163,4 +164,13 @@ p{
     .display2{
         padding-left: 10px;
     }
+}
+#resume-button{
+    background-color: #d7af49;
+    color: #000000;
+    font-weight: bold;
+    
+}
+.management{
+    padding-top: 10px;
 }
