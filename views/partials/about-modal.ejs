@@ -1,0 +1,112 @@
+<%
+  // ----- About-modal data: full story + timeline -----
+  const STORY = [
+    {
+      paragraph: `I'm <strong>Debarghya Sengupta</strong>, a Computer Science Engineering student at GNIT, Kolkata. My journey into tech started back in 2023 with my first lines of Java, Python and C — equal parts terrifying and thrilling. What hooked me was realising that code is just a way of bending logic into something that lives, breathes and quietly serves people.`,
+    },
+    {
+      paragraph: `By 2024, I had moved beyond syntax tutorials into building real things. React, Node and Express started clicking, and I shipped my first scrappy full-stack projects. Most of them broke in interesting ways. Fixing them taught me more than ten tutorials about doing it "the right way" ever could — that shipping imperfect work and learning in public is the only honest path forward.`,
+    },
+    {
+      paragraph: `2025 was the year of leadership and credentials. I became <strong>Cloud Computing Lead</strong> at the Microsoft Student Ambassador GNIT Chapter and <strong>Co-Head of Mahakash Club</strong>, our space and aerospace community. Cloud certifications from Oracle (OCI Developer Professional, Generative AI Professional, AI Autonomous Database) and Microsoft Azure followed. <em>MediHub</em> taught me how dense healthcare workflows really are; <em>PotatoScan</em> taught me that AI quietly transforms agriculture when you keep the experience simple.`,
+    },
+    {
+      paragraph: `This year — 2026 — I'm focused on <strong>AI engineering done right</strong>. <em>Nyatik Nayan</em> and <em>Fin-Eye</em> are my answers to two questions I keep asking: can AI catch retail fraud the moment it happens, and can it actually answer questions about dense financial documents without making things up? I'm building, breaking, shipping and learning more than ever — and I'm just getting started.`,
+    },
+  ];
+
+  const TIMELINE = [
+    {
+      year: "2026",
+      items: [
+        "Building Nyatik Nayan (AI fraud detection) and Fin-Eye (RAG for financial docs).",
+        "Leading Cloud Computing as MSA GNIT — workshops, Azure deep-dives, mentoring juniors.",
+        "Going deeper on Java DSA — daily problems, building intuition for trees and graphs next.",
+      ],
+    },
+    {
+      year: "2025",
+      items: [
+        "Became Co-Head of Mahakash Club; ran our biggest space-awareness meet yet.",
+        "Earned Oracle OCI Developer Professional, Oracle Generative AI Professional and OCI AI Autonomous Database certifications.",
+        "Got the Microsoft Azure management foundation cert and the Zscaler Cybersecurity Fundamentals.",
+        "Shipped MediHub (digital prescriptions) and PotatoScan (97% disease classification).",
+      ],
+    },
+    {
+      year: "2024",
+      items: [
+        "Built my first real full-stack projects with React, Node and Express.",
+        "Designed and shipped the Mahakash Club website — my first deployed site that wasn't just for me.",
+        "Wrote the first iteration of this portfolio. Hated it the next week. Started planning version two.",
+      ],
+    },
+    {
+      year: "2023",
+      items: [
+        "Entered GNIT for Computer Science Engineering.",
+        "Wrote my first real programs in Java, Python and C — figured out the difference between code that runs and code that's understood.",
+        "Decided I wanted to spend a long time figuring out how technology actually works.",
+      ],
+    },
+  ];
+%>
+<div class="about-modal" id="about-modal" role="dialog" aria-modal="true" aria-labelledby="about-modal-title" aria-hidden="true">
+  <div class="about-modal-panel" role="document">
+    <button class="about-modal-close" type="button" data-close-about aria-label="Close full story">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="18" y1="6" x2="6" y2="18" />
+        <line x1="6" y1="6" x2="18" y2="18" />
+      </svg>
+    </button>
+
+    <header class="about-modal-head">
+      <span class="section-eyebrow">// the whole story</span>
+      <h2 id="about-modal-title" class="section-heading">The Story So Far</h2>
+      <p class="section-subhead">
+        From first lines of code in 2023 to building AI that ships in 2026.
+      </p>
+    </header>
+
+    <div class="about-modal-body">
+      <div class="story-grid">
+        <div class="story-text">
+          <% STORY.forEach(s => { %>
+            <p><%- s.paragraph %></p>
+          <% }) %>
+
+          <div class="off-topic-wrap">
+            <button type="button" class="btn-pill" data-toggle-offtopic aria-expanded="false" aria-controls="about-offtopic">
+              <span data-offtopic-show>A little off-topic 👀</span>
+              <span data-offtopic-hide hidden>Hide the off-topic stuff 🙈</span>
+            </button>
+            <div class="off-topic-content" id="about-offtopic" hidden>
+              <p>
+                Outside of the editor, I lean into a few things hard. Football is one — there's a kind of poetry in watching a team that has earned the right to play with the ball at their feet. I love getting lost in a good book or a good film, and I think the best engineering and the best storytelling are weirdly the same craft: every detail earns its place, or it gets cut.
+              </p>
+              <p style="color: var(--muted-2); font-size: 0.85rem;">
+                <em>Tip: edit this section in <code>views/partials/about-modal.ejs</code> to add the films, books, music and hobbies that actually make you, you.</em>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="story-timeline">
+          <h3 class="timeline-title">// the evolution</h3>
+          <div class="timeline-list">
+            <% TIMELINE.forEach(yr => { %>
+              <div class="timeline-year">
+                <span class="year-label"><%= yr.year %></span>
+                <ul class="year-items">
+                  <% yr.items.forEach(item => { %>
+                    <li><%= item %></li>
+                  <% }) %>
+                </ul>
+              </div>
+            <% }) %>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</div>
