@@ -586,6 +586,7 @@ section.section + section.section {
   position: relative;
   display: flex;
   justify-content: center;
+
 }
 
 .hero-photo {
