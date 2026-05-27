@@ -67,9 +67,11 @@
     const height = TOP_PAD + 7 * STEP - GAP + BOTTOM_PAD;
 
     const parts = [];
+    // No hardcoded width/height — viewBox + CSS width:100% lets the SVG
+    // scale to fill the card the same way the right-side activity image does.
     parts.push(
       '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + width + ' ' + height +
-      '" width="' + width + '" height="' + height + '" role="img" aria-label="GitHub contribution graph for the last 6 months">'
+      '" preserveAspectRatio="xMidYMid meet" role="img" aria-label="GitHub contribution graph for the last 6 months">'
     );
 
     // Day labels (rows): show only Mon, Wed, Fri
