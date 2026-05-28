@@ -244,23 +244,13 @@ p.lead { color: rgba(255, 255, 255, 0.78); font-size: 1.05rem; }
   color: transparent;
 }
 
-/* Warm aurora — used for things that should feel personal / emotional,
-   like favourite book titles. Cyan-to-amber, weighted toward amber so
-   it reads warmer than the cool .gradient-text used for headings. */
+/* Book titles — italic, solid warm amber. Restrained on purpose:
+   gradients on small italic runs read messy, and "less, but better"
+   is the section's whole tone. */
 .book-title {
   font-style: italic;
-  font-weight: 600;
-  background: linear-gradient(
-    95deg,
-    var(--title-c-light) 0%,
-    var(--accent-amber-soft) 50%,
-    var(--accent-amber) 100%
-  );
-  -webkit-background-clip: text;
-          background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 18px var(--accent-amber-glow);
+  font-weight: 500;
+  color: var(--accent-amber);
 }
 
 /* ---------- Typewriter (hero rotating role) ----------
