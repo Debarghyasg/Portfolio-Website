@@ -209,6 +209,7 @@ p.lead { color: rgba(255, 255, 255, 0.78); font-size: 1.05rem; }
 .section-heading {
   font-size: clamp(2.2rem, 5.2vw, 3.8rem);
   font-weight: 600;
+  padding-bottom:10px !important;
   letter-spacing: -0.04em;
   line-height: 1.05;
   background: linear-gradient(
